@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: "Segoe UI", sans-serif;
+      overflow: hidden;
+    }
+
+    .page {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: opacity 0.8s;
+      padding: 20px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* PAGE 1 */
+    #page1 {
+      background: linear-gradient(135deg, #ff7eb9, #ff758c);
+      color: white;
+    }
+
+    #page1 h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    #page1 p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    #page1 button {
+      padding: 15px 35px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: #ff4d6d;
+      color: white;
+    }
+
+    /* PAGE 2 */
+    #page2 {
+      background: linear-gradient(135deg, #ff9a9e, #fecfef);
+      color: #444;
+    }
+
+    #page2 h1 {
+      color: #ff4d6d;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      max-height: 55vh;
+      overflow-y: auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .message p {
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 25px;
+    }
+
+    button.yes {
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+    }
+
+    button.no {
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      background: #ddd;
+      color: #555;
+      cursor: pointer;
+    }
+
+    /* PAGE 3 */
+    #page3 {
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: #333;
+    }
+
+    #page3 h1 {
+      color: #ff4d6d;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    #page3 p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    /* HEARTS */
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 24px;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page" id="page1">
+    <h1>Hi to the most gorgeous woman ever 💖</h1>
+    <p>Every day with you is brighter, happier, and filled with love.</p>
+    <button onclick="goToPage2()">Continue ➡️</button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page hidden" id="page2">
+    <h1>My Love 💕</h1>
+
+    <div class="message">
+      <p>
+        i was just thinking about us and i felt like i had to tell you this.
+        me meeting you in june 2024 was honestly one of the best things that has ever happened to me.
+        like out of all people, it was you.
+      </p>
+
+      <p>
+        and then july 22, when we became bf and gf… that still feels so crazy to me.
+        a girl as pretty as you liking my dumbass will never make sense to me 😭
+      </p>
+
+      <p>
+        we’ve been doing this long distance for almost two years now, and yeah it hasn’t always been easy.
+        we’ve had ups and downs, moments where things weren’t perfect,
+        days where we missed each other way too much.
+      </p>
+
+      <p>
+        but instead of breaking us, it just made us stronger.
+        every problem, every hard moment, we got through it together.
+      </p>
+
+      <p>
+        you mean so much to me.
+        you’re my girlfriend, my best friend, my comfort, my safe place
+        and of course my wife and mommy ❤️
+      </p>
+
+      <p>
+        no matter what’s going on, talking to you makes everything feel better.
+        i don’t want anyone else.
+        i don’t see myself with anyone else.
+      </p>
+
+      <p>
+        i want a life with you, not just now, but in the future too.
+        i want to build something real with you,
+        grow with you,
+        and keep choosing you every single day.
+      </p>
+
+      <p>
+        you’re the best thing that has ever happened to me and i’m so grateful for you.
+        no matter the distance, no matter what we go through,
+        i’m here and i’m not going anywhere.
+      </p>
+
+      <p>
+        i choose you, always.
+        i love you so much ❤️
+      </p>
+    </div>
+
+    <h2>Will you be my Valentine? 💌</h2>
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">YES 💖</button>
+      <button class="no" onclick="sayNo()">NO 🙃</button>
+    </div>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="page hidden" id="page3">
+    <h1>YAY! 💘</h1>
+
+    <p>
+      you are the most beautiful, prettiest, hottest girl ever 😍<br>
+      insanely kind, unbelievably cute, and perfect in every way 💖
+    </p>
+
+    <p>
+      thank you for choosing me 🥹💕<br>
+      — your dumbass ugly boyfriend 😎💀
+    </p>
+  </div>
+
+  <script>
+    function goToPage2() {
+      document.getElementById("page1").classList.add("hidden");
+      document.getElementById("page2").classList.remove("hidden");
+    }
+
+    function sayYes() {
+      document.getElementById("page2").classList.add("hidden");
+      document.getElementById("page3").classList.remove("hidden");
+
+      setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }, 300);
+    }
+
+    function sayNo() {
+      alert("nice try 😌❤️");
+    }
+  </script>
+
+</body>
+</html>
